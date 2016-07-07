@@ -1,0 +1,26 @@
+[{
+	"loc": {
+		"$nearSphere": {
+			"$geometry": {
+				"type": "Point",
+				"coordinates": [78.5257835, 13.035292]
+			},
+			"$maxDistance": 0.012
+		}
+	}
+}, {
+	"loc": {
+		"$nearSphere": {
+			"$geometry": {
+				"type": "Point",
+				"coordinates": [77.638027, 13.035292]
+			},
+			"$maxDistance": 0.012
+		}
+	}
+}, {
+	"loc": {
+		"$nearSphere": [77.638027, 13.035292],
+		"$maxDistance": 0.01254
+	}
+}]

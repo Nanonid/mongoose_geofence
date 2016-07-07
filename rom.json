@@ -1,0 +1,23 @@
+[
+  {
+    "loc": {
+      "type": "Point",
+      "coordinates": [77.698027,13.025292]
+    },
+    "radius" : 115.1735664276843
+  },
+  {
+    "loc": {
+      "type": "Point",
+      "coordinates": [76.638027,11.035292]
+    },
+    "radius" : 122.2
+  },
+  {
+    "loc": {
+      "type": "Point",
+      "coordinates": [75.238027,11.235292]
+    },
+    "radius" : 82.2
+  }
+]
