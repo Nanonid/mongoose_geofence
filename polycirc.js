@@ -1,5 +1,16 @@
 var GreatCircle = require('./GreatCircle');
-
+/**
+ * circumscribed radius (Rc) is the hypotenuse of the bisected triangle of
+ * a regular polygon side whose median is the circle radius, Rp.
+ * The angle a for each side of the polygon is 2Pi/nsides, and so the ratio
+ * of the hypotenuse (Rc) of the right triangle to the radius (Rp) is cos(a/2)
+ * or cos(Pi/nsides), cos(a/2) = Rp/Rc, and so Rc = Rp/cos(a/2).
+ * For the unit circle, Rc = Rp*1/cos(a/2).
+ * The ratio is ~1.0824 for n==8, and approaches 1.0 for more sides.
+ * @param {Number} Radius of the circle
+ * @param {Number} number of sides of the polygon
+ * @return {Number} the radius required to circumscribe or enclose the circle.
+ */
 function circumscribedRadius( radius, nsides ){
   return radius * (1.0 / (Math.cos(Math.PI/nsides)));
 }
@@ -15,6 +26,9 @@ function circumscribedRadius( radius, nsides ){
  * @param {Number[]} point[longitude,latitude]
  * @param {Number} radius in KM
  * @param {Number} number of sides from 3 to ?
+ * @return {Object} geojson object of type "Polygon" containing one outer ring
+ * of an N-sided regular polygon circumscribing the circle of radius, where
+ * the first two points are normal to 0 bearing.
  */
 function polygonCircumscribe( point, radius, nsides ){
   var polygon = { type: "Polygon" };
