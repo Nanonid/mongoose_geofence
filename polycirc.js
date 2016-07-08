@@ -21,7 +21,7 @@ function circumscribedRadius( radius, nsides ){
  * polygonCircumscribe calculates with north bearing (0.0,or 360.0)
  * northing side (top-ish) should be parallel to longitude and thus the first
  * two points should share latitude.
- * this means than Minimum Bounding Rectangle is defined as polygonCircumscribe
+ * this means Minimum Bounding Rectangle is defined as polygonCircumscribe
  * with nsides == 4 where the resulting rectangle is square to the grid.
  * @param {Number[]} point[longitude,latitude]
  * @param {Number} radius in KM
