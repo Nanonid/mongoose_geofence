@@ -7,7 +7,7 @@ var GreatCircle = require('./GreatCircle');
 
 function dist( p1, p2 ){
   console.log( p1[0], p1[1], p2[0], p2[1] );
-  console.log("Distance between: " + GreatCircle.distance( p1[0], p1[1], p2[0], p2[1], "KM" )  + " KM" );
+  console.log("Distance between: " + GreatCircle.distance(p1,p2, "KM" )  + " KM" );
 }
 console.log('\n===========');
 console.log(' mongoose version: %s', mongoose.version);
